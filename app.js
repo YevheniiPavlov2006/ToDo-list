@@ -1,15 +1,17 @@
 const list = document.querySelector('.list')
 
 
+
 //--------------------------------------------------------------------
 
 function addItem() {
   const itemText = prompt("What do you want to add?")
   const item = document.createElement("div")
   item.innerHTML = 
-    `${itemText}<button class="btn delete-btn">X</button>`
+    `<div class="todo-text">${itemText}</div>
+     <button class="btn delete-btn">X</button>`
   list.appendChild(item)
-  findDeleteItem()// Нужно чтобы после создания нового элемента он учитывался в индексах на слушателях
+  findDeleteItem()
 }
 
 function clearList(){
